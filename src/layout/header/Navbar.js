@@ -5,10 +5,10 @@ import React from 'react'
       
       <nav className="navbar navbar-expand-lg navbar-dark">
 
-        <a className="navbar-brand" href="#banner">
+        <a className="navbar-brand" href="#banner" >
           <img src="images/logo.png" style={{height: "100px"}}/>
         </a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
 

@@ -1,12 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react';
+import {Button, ModalContainer} from '../sectionOne/SectionOne';
+import styled from 'styled-components';
+import GlobalStyle from '../../globalStyles';
 
- const Banner = () => {
-   return (
-      <section id="about"className="banner dark-section row clearfix">
+import ModalTwo from '../modal/ModalTwo';
+
+ const Banner = () => {    
+  const [showModal, setShowModal] = useState(false)
+
+  const openModal = () =>{ 
+     setShowModal(prev => !prev) }
+   
+    return (
+      <section id="about" className="banner dark-section row clearfix">
           <div className="container">
             <div className="row clearfix">
               <div className="col-md-6">
-                <h1>Say Goodbye Outdated Self Development Courses & Say Hello tp Rhythmoya...</h1>
+                <h1>Say Goodbye Outdated Self Development Courses & Say Hello to Rhythmoya...</h1>
                 <h5>Notice meaningful changes in the first 7 days...</h5>
                 <ul>
                   <li>Make a Bigger Impact</li>
@@ -15,8 +25,13 @@ import React from 'react'
                   <li>Reduce And Eliminate Stress</li>
                   <li>Real Confidance In Yourself</li>
                   <li>Clear Past Trauma & Negative Beliefs</li> 
-                </ul>
-                <a href="#" className="btn btn-joinus">JOIN  US NOW</a>
+                </ul>                 
+                {/* modal here */}
+                <ModalContainer>
+              <Button onClick={openModal} className="" > JOIN US</Button>
+              <ModalTwo showModal={showModal} setShowModal={setShowModal}/>
+              <GlobalStyle/>
+              </ModalContainer>
               </div>
               <div className="col-md-6">
                 <img src="images/banner-image1.png" className="img-fluid"/>
@@ -33,6 +48,8 @@ import React from 'react'
           </div>
         </section>
    )
+   
+   
 }
 
 export default Banner

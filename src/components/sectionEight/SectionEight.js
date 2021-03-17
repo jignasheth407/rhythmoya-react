@@ -1,6 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react';
+import {Button, ModalContainer} from '../sectionOne/SectionOne';
+import GlobalStyle from '../../globalStyles';
+
+import ModalTwo from '../modal/ModalTwo';
 
 const SectionEight = () => {
+  const [showModal, setShowModal] = useState(false)
+
+   const openModal = () =>{ 
+      setShowModal(prev => !prev) }
    return (
       <section class="row">
           <div class="container text-center">
@@ -10,7 +18,11 @@ const SectionEight = () => {
                 <p>Discover how to master your LIFE.</p>
                 <p>Become Centered, Get Clear, Start Condensing Your Focus and Learn To Live Confidently…</p>
                 <p>The mastery section uncovers step by step blueprints and guided hypnosis sessions to reprogram your mindset automatically and become a stronger, emotionally stable, better version of you than you could ever attain by yourself…</p>
-                <a href="#" class="btn btn-joinus">JOIN US NOW</a>
+                <ModalContainer>
+              <Button onClick={openModal} className="" > JOIN US</Button>
+              <ModalTwo showModal={showModal} setShowModal={setShowModal}/>
+              <GlobalStyle/>
+              </ModalContainer>
               </div>
               <div class="col-md-4">
                 <img src="images/WidgetImage5.png" class="img-fluid"/>

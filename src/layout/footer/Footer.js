@@ -2,6 +2,7 @@ import React from 'react'
 
 const Footer = () => {
    return (
+     <>
       <footer class="row">          
 
             <div class="col-md-4">
@@ -22,8 +23,13 @@ const Footer = () => {
               </div>
               
             </div>
-          
+            
         </footer>
+        
+        <a id="back-to-top" href="#" class="btn btn-light btn-top btn-lg back-to-top" role="button"><i class="fas fa-angle-up"></i></a>
+
+        {/* <div id='toTop'><button>Top</button></div> */}
+        </>
    )
 }
 

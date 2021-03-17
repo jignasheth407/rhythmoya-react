@@ -1,6 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react';
+import {Button, ModalContainer} from '../sectionOne/SectionOne';
+import GlobalStyle from '../../globalStyles';
+
+import ModalTwo from '../modal/ModalTwo';
 
 const SectionNine = () => {
+  const [showModal, setShowModal] = useState(false)
+
+   const openModal = () =>{ 
+      setShowModal(prev => !prev) }
    return (
       <section class="row">
           <div class="container text-center">
@@ -13,7 +21,12 @@ const SectionNine = () => {
                 <p>Connect, Contribute and Collaborate with other members inside the powerhouse community. </p>
                 <p>You’re about to become part of an integrated community of very unique people from all around the world inside your Rhythmoya platform… </p>
                 <p>Everyone wants you to win, and wants to win just as badly as you do...</p>
-                <a href="#" class="btn btn-joinus">JOIN US NOW</a>
+                <ModalContainer>
+              <Button onClick={openModal} className="" > JOIN US</Button>
+              <ModalTwo showModal={showModal} setShowModal={setShowModal}/>
+              <GlobalStyle/>
+              </ModalContainer>
+
               </div>
             </div>
           </div>

@@ -20,7 +20,9 @@ import Footer from './layout/footer/Footer';
 import {Router, Route} from 'react-router-dom'
 
 
+
 function App() {
+  
   return (
     <div className="container-fluid">
       {/* <Router>

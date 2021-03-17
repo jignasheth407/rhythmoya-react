@@ -153,15 +153,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01a6e6', end
 
 footer{ padding: 25px 0px}
 
+.head_fixed{
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+
+#toTop {
+	padding: 5px 3px;
+	background: #000;
+	color: #ff0000;
+	position: fixed;
+	bottom: 0;
+	right: 5px;
+	z-index: 999;
+}
+
+/* top bittion*/
 .back-to-top {
 	position: fixed;
 	bottom: 25px;
 	right: 25px;
 	display: none;
-	background-color: #3498db;
-	color: #ecf0f1;
+}
+.btn-top{
+	background-color: #2aa9e4;
+}
+.btn-top:hover{
+	background: linear-gradient(to bottom,  #01a6e6 0%,#01a0e2 22%,#0180cd 71%,#0077c7 93%,#0471c3 100%);;
 }
 
+.fa-angle-up{
+	color: #000;
+}
 @media (min-width: 992px){
 .navbar-expand-lg .navbar-nav .nav-link {padding-right: 1rem;padding-left: 1rem;}
 }
